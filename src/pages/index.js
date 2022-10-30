@@ -1,4 +1,7 @@
-import * as React from "react"
+import * as React from "react";
+import Button from '@mui/material/Button';
+import { Box, Container } from "@mui/system";
+import TextField from '@mui/material/TextField';
 
 const pageStyles = {
   color: "#232129",
@@ -126,11 +129,35 @@ const links = [
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
-      <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! 🎉🎉🎉</span>
-      </h1>
+      <Box
+        component="form"
+        sx={{
+          '& .MuiTextField-root': { m: 1, width: '25ch' },
+        }}
+        noValidate
+        autoComplete="off"
+      >
+        <h1 style={headingStyles}>
+          This is a form
+          <br />
+          <span style={headingAccentStyles}>— Fill this to login 🎉🎉🎉</span>
+        </h1>
+        <div>
+          <TextField
+            required
+            id="outlined-required"
+            label="Required"
+            defaultValue="Hello World"
+          />
+          <TextField
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            autoComplete="current-password"
+          />
+        </div>
+      </Box>
+
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
         update in real-time. 😎
