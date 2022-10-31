@@ -5,6 +5,13 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { Card, CardContent, Grid, Paper } from "@mui/material";
 import Image from '../images/camo-pattern.jpeg';
+import Image1 from '../images/guns-card.webp';
+import Image2 from '../images/arbourder-card.jpg';
+import Image3 from '../images/artillary-card.jpg';
+import Image4 from '../images/drones-card.webp';
+import Image5 from '../images/missile-card.jpg';
+import Image6 from '../images/tanks-card.webp';
+import CardMedia from '@mui/material/CardMedia';
 
 const pageStyles = {
   color: "#ffffff",
@@ -173,7 +180,13 @@ const IndexPage = () => {
         </Typography>
         <Grid container spacing={1}>
           <Grid item xs={6} md={6} >
-            <Card style={contentCard}>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia
+                component="img"
+                height="140"
+                image='../images/guns-card.webp'
+                alt="alt_image"
+              />
               <CardContent>
                 <Typography variant='h4'> Guns </Typography>
               </CardContent>
@@ -181,6 +194,12 @@ const IndexPage = () => {
           </Grid>
           <Grid item xs={6} md={6} >
             <Card style={contentCard}>
+              <CardMedia
+                component="img"
+                height="140"
+                image='../images/guns-card.webp'
+                alt="alt_image"
+              />
               <CardContent>
                 <Typography variant='h4'> Missiles </Typography>
               </CardContent>
@@ -188,6 +207,12 @@ const IndexPage = () => {
           </Grid>
           <Grid item xs={6} md={6} >
             <Card style={contentCard}>
+              <CardMedia
+                component="img"
+                height="140"
+                image='../images/guns-card.webp'
+                alt="alt_image"
+              />
               <CardContent>
                 <Typography variant='h4'> Artilary </Typography>
               </CardContent>
@@ -195,6 +220,12 @@ const IndexPage = () => {
           </Grid>
           <Grid item xs={6} md={6} >
             <Card style={contentCard}>
+              <CardMedia
+                component="img"
+                height="140"
+                image='../images/guns-card.webp'
+                alt="alt_image"
+              />
               <CardContent>
                 <Typography variant='h4'> Tanks </Typography>
               </CardContent>
@@ -202,6 +233,12 @@ const IndexPage = () => {
           </Grid>
           <Grid item xs={6} md={6} >
             <Card style={contentCard}>
+              <CardMedia
+                component="img"
+                height="140"
+                image='../images/guns-card.webp'
+                alt="alt_image"
+              />
               <CardContent>
                 <Typography variant='h4'> Armoured Vehicles </Typography>
               </CardContent>
@@ -209,6 +246,12 @@ const IndexPage = () => {
           </Grid>
           <Grid item xs={6} md={6} >
             <Card style={contentCard}>
+              <CardMedia
+                component="img"
+                height="140"
+                image='../images/guns-card.webp'
+                alt="alt_image"
+              />
               <CardContent>
                 <Typography variant='h4'> Drones </Typography>
               </CardContent>
