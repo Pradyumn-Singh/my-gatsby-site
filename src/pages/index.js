@@ -2,11 +2,20 @@ import * as React from "react";
 import Button from '@mui/material/Button';
 import { Box, Container } from "@mui/system";
 import TextField from '@mui/material/TextField';
+import Typography from '@mui/material/Typography';
+import { Card, CardContent, Grid, Paper } from "@mui/material";
+import Image from '../images/camo-pattern.jpeg';
 
 const pageStyles = {
   color: "#232129",
-  padding: 96,
+  padding: 50,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  backgroundImage: `url(${Image})`,
+  marginTop: -8,
+  marginRight: -8,
+  marginBottom: -8,
+  marginLeft: -8,
+
 }
 const headingStyles = {
   marginTop: 0,
@@ -126,36 +135,76 @@ const links = [
   },
 ]
 
+const content_section = (props) => (
+  <Paper
+    style={{
+      backgroundColor: 'blue',
+      color: "white",
+      width: "100",
+      height: "100"
+    }}
+  >
+    props.content_value
+  </Paper>
+);
+
 const IndexPage = () => {
   return (
     <main style={pageStyles}>
       <Box
-        component="form"
         sx={{
-          '& .MuiTextField-root': { m: 1, width: '25ch' },
+          backgroundColor: 'rgba(255, 255, 255, 0.4)',
+          '& .MuiTextField-root': { m: 5, width: '55ch' },
+          padding: 8
         }}
-        noValidate
-        autoComplete="off"
       >
-        <h1 style={headingStyles}>
-          This is a form
-          <br />
-          <span style={headingAccentStyles}>— Fill this to login 🎉🎉🎉</span>
-        </h1>
-        <div>
-          <TextField
-            required
-            id="outlined-required"
-            label="Required"
-            defaultValue="Hello World"
-          />
-          <TextField
-            id="outlined-password-input"
-            label="Password"
-            type="password"
-            autoComplete="current-password"
-          />
-        </div>
+        <Typography variant="h3" gutterBottom>
+          Weaponary Info
+        </Typography>
+        <Grid container spacing={1}>
+          <Grid item xs={6} md={6} >
+            <Card>
+              <CardContent>
+                <Typography> Guns </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={6} md={6} >
+            <Card>
+              <CardContent>
+                <Typography> Missiles </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={6} md={6} >
+            <Card>
+              <CardContent>
+                <Typography> Artilary </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={6} md={6} >
+            <Card>
+              <CardContent>
+                <Typography> Tanks </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={6} md={6} >
+            <Card>
+              <CardContent>
+                <Typography> Armoured Vehicles </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={6} md={6} >
+            <Card>
+              <CardContent>
+                <Typography> Drones </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
       </Box>
 
       <p style={paragraphStyles}>
